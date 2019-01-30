@@ -1,0 +1,504 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+
+body {
+    font-family: 'Exo 2', helvetica, sans-serif;
+    background-color: #ececec;
+    margin: 0;
+    width: 100%;
+}
+
+/*-------------------Navigatie balk---------------*/
+
+div > a {
+    max-width: 100%;
+    margin: 1.5em;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    background-color: white;
+    padding: 1em 1em 1em;
+    justify-content: flex-start;
+    height: 5em;
+    left: 0;
+    right: 0;
+    top: 0;
+
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 1.5em;
+    height: 2.3em;
+}
+
+li {
+    list-style: none;
+    padding-left: 1em;
+    margin-left: 1.5em;
+    margin-top: 0.9em;
+}
+
+li img {
+    width: 1.5em;
+}
+
+.logo {
+    max-width: 7.5em;
+}
+
+/*------------------Zoeken blok--------------------*/
+
+form.Zoekblok {
+    width: 19em;
+    height: 19em;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    overflow: hidden;
+    margin-top: 7em;
+    background-color: white;
+    padding: 1em;
+    box-sizing: border-box;
+
+}
+
+input[type=search] {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    border-bottom: 0.1em solid midnightblue;
+    height: 4em;
+    width: 100%;
+    padding-left: 1.5em;
+}
+
+input[type=search]:focus {
+    border: 0.3em solid midnightblue;
+    outline: none;
+    transition: 0.3s;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    display: none;
+}
+
+fieldset > label {
+    text-align: left;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* ---------- Zoek button in filter functie -----------*/
+
+fieldset > button {
+    background-color: orange;
+    border-style: none;
+    font-weight: 600;
+    font-size: 1em;
+    width: 10em;
+    margin-bottom: 2em;
+    height: 2.5em;
+    color: white;
+
+}
+
+fieldset > button:hover {
+    background-color: darkorange;
+}
+
+fieldset > button:focus {
+    outline: none;
+}
+
+/* ---------- Filter button in filter functie -----------*/
+
+fieldset + button {
+    font-size: 1em;
+    width: 10em;
+    border-bottom-style: none;
+    background-color: midnightblue;
+    height: 2.5em;
+    color: white;
+    font-weight: 600;
+}
+
+fieldset + button:focus {
+    outline: none;
+}
+
+fieldset + button:hover {
+    background-color: black;
+}
+
+
+/*-------------------Filter functie------------*/
+
+form + form {
+    visibility: hidden;
+    background-color: grey;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: white;
+    margin-top: -20em;
+    display: flex;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 42em;
+    height: 12em;
+    text-align: left;
+}
+
+form + form fieldset {
+    justify-content: space-around;
+    width: 100%;
+}
+
+form + form label {
+    color: white;
+    display: flex;
+    margin-bottom: 0.4em;
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+}
+
+form + form legend {
+    display: flex;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+
+form + form input {
+    cursor: pointer;
+    margin-right: 0.5em;
+}
+
+/* ------------Laat filter open klappen --------*/
+
+.aan {
+    margin-top: 7em;
+    visibility: visible;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/*---------------------Verhalen----------------*/
+
+h1 {
+    font-size: 2em;
+    margin-left: 0.5em;
+    color: midnightblue;
+    width: 100%;
+    margin-top: 2em;
+}
+
+header + div {
+    max-width: 66em;
+    margin: auto;
+}
+
+p > a {
+    color: darkorange;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.favorieten {
+    margin-top: 7em;
+}
+
+p > a:hover {
+    font-weight: 900;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: auto;
+    max-width: 80em;
+}
+
+article {
+    position: relative;
+    padding: 2em 1em;
+    max-width: 20em;
+    margin: 1em 1em 1em;
+    height: 30em;
+    background-color: white;
+}
+
+article:hover {
+    background-color: whitesmoke;
+}
+
+article h2 {
+    margin-top: 1em;
+}
+
+h2 + p {
+    margin-bottom: 3em;
+    line-height: 1.3em;
+}
+
+article img {
+    margin: -1em;
+    margin-top: -2em;
+    margin-bottom: 0em;
+    width: calc(100% + 2em);
+
+}
+
+/* --------- Button op verhaal voor microinteractie -----------*/
+
+article button {
+    max-width: 2em;
+    border: none;
+    text-decoration: none;
+}
+
+article button:focus {
+    outline: none;
+}
+
+article button:hover {
+    max-width: 2.5em;
+    transition: 0.3s;
+}
+
+
+/* ------------------ Micro interactie ster -------*/
+
+.microster {
+    color: white;
+    font-weight: 500;
+    background-color: midnightblue;
+    padding: 1.5em 4em;
+    margin-top: -5em;
+}
+
+.microster p {
+    display: inline-block;
+}
+
+.microster a {
+    color: yellow;
+    border: 0.1em solid yellow;
+    padding: 0.7em 1em;
+    text-decoration: none;
+    margin-left: 0.8em;
+}
+
+.microster a:hover {
+    font-weight: 600;
+}
+
+.starten {
+    margin-top: 3.5em;
+    position: fixed;
+    width: 100%;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+/*------------DIV'je cointainer----------------*/
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 80em;
+}
+
+/*--------------Inloggen formulier------------*/
+
+form.login {
+    margin-top: 8em;
+    background-color: white;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 20em;
+    text-align: left;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+form.login input[type=text],
+form.login input[type=email],
+form.login input[type=password] {
+    height: 4em;
+    width: 26em;
+    border-width: thin;
+    border-color: darkgrey;
+    padding-left: 1em;
+    box-sizing: border-box;
+    margin-bottom: 1.5em;
+}
+
+form.login label {
+    color: grey;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+form.login button {
+    margin-top: 1em;
+    padding: 0.8em 6.7em;
+    color: white;
+    background-color: orange;
+    border-style: none;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+form.login button:hover {
+    background-color: darkorange;
+}
+
+form.login a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+input:required:invalid {
+    outline-width: 1em;
+    outline-color: red;
+
+}
+
+input:required:valid {
+    outline-width: 1em;
+    outline-color: limegreen;
+}
+
+/*----------Maak account------------------*/
+
+form.login + a {
+    margin-top: 8em;
+    margin-left: 3em;
+    padding: 1em;
+    background-color: orange;
+    width: 20em;
+    height: 3em;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+form.login + a:hover {
+    background-color: darkorange;
+}
+
+/*----------------Footer------------------*/
+
+footer {
+    margin-top: 6.5em;
+    bottom: 0;
+    background-color: rgb(18, 62, 113);
+    padding: 2em;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+/*-----Responsive---------Max 66em ---------------*/
+
+@media (max-width: 66em) {
+    form + form {
+        width: 20em;
+        flex-direction: column;
+        height: 26.5em;
+        margin-top: 6em;
+    }
+
+    form + form fieldset {
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        width: 20em;
+    }
+
+    header + div {
+        justify-content: center;
+    }
+
+    main {
+        justify-content: flex-start;
+        width: 44em;
+    }
+
+    form + form {
+        margin-top: -20em;
+    }
+
+}
+
+/*-----Responsive---------Max 43em ---------------*/
+
+@media (max-width: 43em) {
+    nav + div {
+        display: flex;
+        padding: 1em;
+        height: 4em;
+        position: fixed;
+    }
+
+    li {
+        margin-left: 0;
+    }
+
+    h1 {
+        justify-content: center;
+    }
+
+    header + div {
+        width: 22em;
+    }
+
+    main {
+        justify-content: center;
+        flex-direction: column;
+        width: 30em;
+    }
+
+    /*------------Mobiel-----balk + sorteren ------*/
+    @media (min-width: 20em) {
+        .starten {
+            margin-top: 4.7em;
+        }
+
+        .aan {
+            margin-top: 2em;
+            visibility: visible;
+
+        }
+
+        form.login + a {
+            margin: 3em auto;
+            text-align: center;
+        }
